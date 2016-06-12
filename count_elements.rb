@@ -1,4 +1,9 @@
 def count_elements(array)
-  # code goes here
+  array.each_with_object({}) do |item, result|
+    if result[item]
+      result[item] += 1
+    else
+      result[item] = 1
+    end
+  end
 end
- 
